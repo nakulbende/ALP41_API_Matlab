@@ -1,55 +1,29 @@
-<div class="content">
-
 # API for controlling DMD
 
 This API controls Digital Micromirror Devices (DMD) device controlled by ViALUX ALP controller. The library is provided by ViALUX GmbH, which is loaded into the environment. Since the library is in C++, there needs to be a working C++ compiler installed and setup with MATLAB. Compatible compilers could be found at [http://www.mathworks.com/support/compilers/R2014b/index.html](http://www.mathworks.com/support/compilers/R2014b/index.html) (careful about the version).
 
 Necessary documentation and libraries can be found in accompanying media (CDs, Drives etc,) from ViALUX. Read about the original VIALUX API in documentation.
 
-<div>
+* This API was developed with grateful aid from Dr. Martin Vogel (Max Planck Institute of Biophysics) and VIALUX. This is a simpler subset of the ALP Tool provided by Dr. Vogel. ([http://www.mathworks.com/matlabcentral/fileexchange/46673-alptool](http://www.mathworks.com/matlabcentral/fileexchange/46673-alptool))
 
-*   This API was developed with grateful aid from Dr. Martin Vogel (Max Planck Institute of Biophysics) and VIALUX. This is a simpler subset of the ALP Tool provided by Dr. Vogel. ([http://www.mathworks.com/matlabcentral/fileexchange/46673-alptool](http://www.mathworks.com/matlabcentral/fileexchange/46673-alptool))
+* Get ALP drivers at ([http://www.vialux.de/transfer/alp-4.2/ALP42_install.exe](http://www.vialux.de/transfer/alp-4.2/ALP42_install.exe) OR [http://www.vialux.de/transfer/alp-4.1/ALP41_install.exe](http://www.vialux.de/transfer/alp-4.1/ALP41_install.exe))
 
-</div>
+* Careful about the versions of library you load - x64/ x86\. This API is for basic - not high speed.
 
-<div>
+* Comments/ correspondence should be addressed to **nakulbende [at] gmail [dot] com**
 
-*   Get ALP drivers at ([http://www.vialux.de/transfer/alp-4.2/ALP42_install.exe](http://www.vialux.de/transfer/alp-4.2/ALP42_install.exe) OR [http://www.vialux.de/transfer/alp-4.1/ALP41_install.exe](http://www.vialux.de/transfer/alp-4.1/ALP41_install.exe))
-
-</div>
-
-<div>
-
-*   Careful about the versions of library you load - x64/ x86\. This API is for basic - not high speed.
-
-</div>
-
-<div>
-
-*   Comments/ correspondence should be addressed to **nakulbende [at] gmail [dot] com**
-
-</div>
-
-<div>
-
-*   Following functions can be used. An exmaple code with a typical routine is included as **_api_control.m_**. This code contains all the functions to be used, in the right order to load library, connect the mirrors and load images.
-
-</div>
+* Following functions can be used. An exmaple code with a typical routine is included as **_api_control.m_**. This code contains all the functions to be used, in the right order to load library, connect the mirrors and load images.
 
 ## Contents
 
-<div>
-
-*   [Load libraries in MATLAB _(api_library)_](#1)
-*   [Connect/ Allocate a DMD device _(api_allocate)_](#3)
-*   [Inquire device/ controller parameters _(api_inquire)_](#6)
-*   [Reset the DMD device _(api_reset)_](#9)
-*   [Clear the DMD mirrors _(api_clear)_](#12)
-*   [Load image on the mirrors _(api_load)_](#15)
-*   [Free the DMD Device after use _(api_free)_](#18)
-*   [Return: Success / error reporting _(return_check)_](#21)
-
-</div>
+1.   [Load libraries in MATLAB _(api_library)_](#1)
+2.   [Connect/ Allocate a DMD device _(api_allocate)_](#3)
+3.   [Inquire device/ controller parameters _(api_inquire)_](#6)
+4.   [Reset the DMD device _(api_reset)_](#9)
+5.   [Clear the DMD mirrors _(api_clear)_](#12)
+6.   [Load image on the mirrors _(api_load)_](#15)
+7.   [Free the DMD Device after use _(api_free)_](#18)
+8.   [Return: Success / error reporting _(return_check)_](#21)
 
 ## Load libraries in MATLAB _(api_library)_<a name="1"></a>
 
@@ -159,7 +133,7 @@ _return_reset_ = Return for success/ error reporting
 
 ## Clear the DMD mirrors _(api_clear)_<a name="12"></a>
 
-**The clear operation sets the memory content of whole reset blocks to logic ’0’**
+**The clear operation sets the memory content of whole reset blocks to logic â€™0â€™**
 
 **INPUTS:**
 
@@ -228,13 +202,13 @@ _return_value_ = Return for success/ error reporting
 
 _out_signal_ = Return for success/ error reporting
 
-![](Returns.png)
+![](Returns.PNG)
 
 **Table.3 Return codes**
 
 <pre class="codeinput"><span class="keyword">function</span> [out_signal] = return_check(return_value);
 </pre>
 
-[Published with MATLAB® R2014a](http://www.mathworks.com/products/matlab/)  
+[Published with MATLABÂ® R2014a](http://www.mathworks.com/products/matlab/)  
 
 </div>
